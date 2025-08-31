@@ -110,31 +110,33 @@ body {
     margin-bottom: 15px;
 }
 
+/* --- هنا تبدأ التعديلات على أحجام الخطوط --- */
 .product-card h3 {
-    font-size: 1em; /* تم تعديل حجم الخط */
-    margin-bottom: 8px; /* تم تعديل المسافة */
+    font-size: 1.1em; /* حجم معتدل لاسم اللعبة */
+    margin-bottom: 6px; 
     color: #007bff;
 }
 
 .social-proof {
-    margin-bottom: 5px; /* تم تعديل المسافة */
+    margin-bottom: 3px; 
     color: #555;
-    font-size: 0.7em; /* تم تعديل حجم الخط */
+    font-size: 0.65em; /* حجم صغير جداً */
 }
 .social-proof .fas {
     color: #007bff; /* Icon color */
-    margin-left: 5px; /* Space between icon and text */
+    margin-left: 4px; 
 }
 
 .product-rating .stars {
     color: #ffc107;
-    font-size: 1em; /* تم تعديل حجم الخط */
+    font-size: 0.9em; /* حجم صغير للنجوم */
 }
 
 .product-rating .reviews {
     color: #777;
-    font-size: 0.6em; /* تم تعديل حجم الخط */
+    font-size: 0.6em; /* حجم صغير جداً لعدد المراجعات */
 }
+/* --- هنا تنتهي التعديلات على أحجام الخطوط --- */
 
 .customer-reviews {
     margin: 20px 0;
@@ -225,6 +227,19 @@ body {
     .products-grid {
         grid-template-columns: 1fr; /* Stack products on smaller screens */
     }
+    /* تعديلات أحجام الخطوط للشاشات الصغيرة */
+    .product-card h3 {
+        font-size: 1em;
+    }
+    .social-proof {
+        font-size: 0.6em;
+    }
+    .product-rating .stars {
+        font-size: 0.85em;
+    }
+    .product-rating .reviews {
+        font-size: 0.55em;
+    }
 }
 
 @media (max-width: 480px) {
@@ -232,10 +247,20 @@ body {
         font-size: 1.2em;
     }
     .product-card h3 {
-        font-size: 1em;
+        font-size: 0.9em; /* صغرناه أكثر للشاشات الأصغر */
     }
     .buy-button {
         font-size: 0.9em;
+    }
+    /* تعديلات أحجام الخطوط للشاشات الصغيرة جداً */
+    .social-proof {
+        font-size: 0.55em;
+    }
+    .product-rating .stars {
+        font-size: 0.8em;
+    }
+    .product-rating .reviews {
+        font-size: 0.5em;
     }
 }
 
