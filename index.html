@@ -501,9 +501,35 @@ margin-bottom: 5px;
 <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a></p>
 </footer>
 <script type='text/javascript' src='//pl27549811.revenuecpmgate.com/9f/d8/4a/9fd84a6caf16d0163df85dd9dd6f9eb3.js'></script>
+Document.addEventListener('DOMContentLoaded', () => {
+    const carousels = document.querySelectorAll('.image-carousel');
+
+    carousels.forEach(carousel => {
+        const carouselImages = carousel.querySelector('.carousel-images');
+        const prevBtn = carousel.querySelector('.prev');
+        const nextBtn = carousel.querySelector('.next');
+        let currentIndex = 0;
+        const totalImages = carouselImages.children.length;
+
+        function updateCarousel() {
+            carouselImages.style.transform = translateX(${-currentIndex * 100}%);
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalImages - 1;
+            updateCarousel();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex < totalImages - 1) ? currentIndex + 1 : 0;
+            updateCarousel();
+        });
+    });
+});
 </body>
 
 </html>
+
 
 
 
